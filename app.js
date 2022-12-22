@@ -5,14 +5,14 @@ const port = 8000;
 const hbs = require("hbs");
 
 // static path
-const staticPath = path.join(__dirname,"../public");
+const staticPath = path.join(__dirname,"./public");
 app.use(express.static(staticPath));
 
 // templates engine 
 app.set("view engine","hbs");
-templatesPath = path.join(__dirname,"../templates/views");
+templatesPath = path.join(__dirname,"./templates/views");
 app.set("views",templatesPath);
-partialsPath = path.join(__dirname,"../templates/partials");
+partialsPath = path.join(__dirname,"./templates/partials");
 hbs.registerPartials(partialsPath);
 
 
